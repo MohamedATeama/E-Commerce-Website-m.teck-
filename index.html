@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.TECK</title>
+    <!-- CSS Links -->
+    <!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oleo+Script:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <a id="top"></a>
+
+    <!-- Navbar Section Starts Here-->
+    <nav class="navbar navbar-expand-lg z-3 fixed-top navbar-dark border-bottom border-body" style="background-color: #084876;">
+        <div class="container">
+            <marquee width="130" behavior="alternate" direction="">
+                <a class="navbar-brand fs-3 logo" href="index.html">M.TECK</a>
+            </marquee>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex ms-auto col-lg-4" role="search">
+                    <input id="searchInput" class="form-control me-1 rounded-pill ms-auto" type="search" placeholder="Search" aria-label="Search">
+                    <button id="searchBtn" class="btn btn-light rounded-pill"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul class="navbar-nav ms-auto mb-lg-0" id="sign">
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link me-5 fs-5 text-white">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link me-5 fs-5 text-white">Register</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-lg-0" id="user-info">
+                    <li class="nav-item me-4">
+                        <a id="user" class="nav-link fs-5 text-white"></a>
+                    </li>
+                    <li class="nav-item me-4 position-relative" id="fav">
+                        <a class="nav-link">
+                            <i class="fa-regular fa-heart fs-3 text-white"></i>
+                            <span id="favCount" class="count text-white"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item me-4 position-relative" id="cart">
+                        <a class="nav-link">
+                            <i class="fa-brands fa-opencart fs-3 text-white"></i>
+                            <span id="count" class="count text-white"></span>
+                        </a>
+                        <div class="cartProduct" id="cartProducts">
+                            <div id="menu"></div>
+                            <a href="cartProducts.html">Show all products</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" id="logout" class="nav-link fs-5 text-white">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="searchResult w-100 row gy-3 justify-content-around py-4 mt-5"></div>
+    <div class="allpage">
+        <!-- Main Section Starts Here-->
+        <main>
+            <div class="main border-bottom border-2">
+                <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark slide w-100 h-100" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100 h-100 ps-lg-5">
+                        <div class="carousel-item active w-100 h-100 position-relative">
+                            <img src="images/main1111.png" class="main-img d-block ms-lg-5 h-100">
+                            <div class="carousel-caption position-absolute">
+                                <h1 class="main-title">M TECK</h1>
+                                <p class="fs-5">Shop one on one with a Specialist. Online or in a store.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item w-100 h-100 position-relative">
+                            <img src="images/main2222.png" class="main-img d-block ms-lg-5 h-100">
+                            <div class="carousel-caption position-absolute">
+                                <h1 class="main-title">A great deal to love.</h1>
+                                <p class="fs-5">A product by MTech.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item w-100 h-100 position-relative">
+                            <img src="images/main66.png" class="main-img d-block ms-lg-5 h-100">
+                            <div class="carousel-caption position-absolute">
+                                <h1 class="main-title">Designed to go places.</h1>
+                                <p class="fs-5">Take a look at what’s new, right now.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Latest Products Section Starts Here-->
+        <section>
+            <div class="latest px-4 border-bottom border-2">
+                <div class="p-3 ps-4 border-bottom border-1">
+                    <h2 class="secHead">Latest Products</h2>
+                </div>
+                <div class="content p-3" id="latestProducts">
+                    <!-- <div class="card d-inline-block mx-3 rounded-4" style="width: 18rem;">
+                        <h3 class="card-title text-center m-3">Soundcore R50i</h3>
+                        <img class="card-img-top" src="images/r50i.jpg" alt="Card image" style="height: 300px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h4>1,100</h4>
+                            </div>
+                            <p class="card-text desc">Soundcore R50i True Wireless Earphones with 10mm Internal Speaker, Powerful Bass, Bluetooth 5.3, 30 Hour Playtime, IPX5 Water Resistant, with 2 Microphones and 22 Equalizers by Anker, Black, Over-Ear</p>
+                            <div class="d-flex justify-content-evenly align-items-center">
+                                <a href="#" class="btn btn-outline-secondary rounded-4">Add to Cart</a>
+                                <span><i class="fa-regular fa-heart fs-4"></i></span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Brst Seller Section Starts Here-->
+        <section>
+            <div class="best px-4 border-bottom border-2">
+                <div class="secHead p-3 ps-4 border-bottom border-1">
+                    <h2 class="secHead">Best Sellers</h2>
+                </div>
+                <div class="content p-3" id="bestProducts">
+                    <!-- <div class="card d-inline-block mx-3 rounded-4" style="width: 18rem;">
+                        <h3 class="card-title text-center m-3">Soundcore R50i</h3>
+                        <img class="card-img-top p-3" src="images/r50i.jpg" alt="Card image" style="height: 300px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h4>1,100</h4>
+                            </div>
+                            <p class="card-text desc">Soundcore R50i True Wireless Earphones with 10mm Internal Speaker, Powerful Bass, Bluetooth 5.3, 30 Hour Playtime, IPX5 Water Resistant, with 2 Microphones and 22 Equalizers by Anker, Black, Over-Ear</p>
+                            <div class="d-flex justify-content-evenly align-items-center">
+                                <a href="#" class="btn btn-outline-secondary rounded-4">Add to Cart</a>
+                                <span><i class="fa-regular fa-heart fs-4"></i></span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- More Products Section Starts Here-->
+        <section>
+            <div class="moreProducts">
+                <div class="container py-5">
+                    <div class="row gx-4 gy-3 justify-content-around" id="moreProducts">
+                        <!-- <div class="card rounded-4" style="width: 400px;">
+                            <div class="card-head m-3 d-flex justify-content-between align-items-center">
+                                <h3 class="card-title">Soundcore R50i</h3>
+                                <h4>1,100</h4>
+                            </div>
+                            <img class="card-img-top" src="images/r50i.jpg" alt="Card image">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="#" class="btn btn-outline-secondary rounded-4">Add to Cart</a>
+                                    <span><i class="fa-regular fa-heart fs-4"></i></span>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer d-flex justify-content-around flex-wrap p-5 text-center mt-5">
+            <div class="col-12 cpl-sm-12 col-md-12 col-lg-3 my-5">
+                <h2>Company</h2>
+                <a class="d-block text-decoration-none my-4" href="#">About Us</a>
+                <a class="d-block text-decoration-none my-4" href="#">Services</a>
+                <a class="d-block text-decoration-none my-4" href="#">Blog</a>
+                <a class="d-block text-decoration-none my-4" href="#">Terms</a>
+            </div>
+            <div class="col-12 cpl-sm-12 col-md-12 col-lg-3 my-5">
+                <h2>Get Help</h2>
+                <a class="d-block text-decoration-none my-4" href="#">FAQs</a>
+                <a class="d-block text-decoration-none my-4" href="#">Contact Us</a>
+                <a class="d-block text-decoration-none my-4" href="#">Live chat</a>
+            </div>
+            <div class="col-12 cpl-sm-12 col-md-12 col-lg-3 my-5">
+                <h2>Quick Links</h2>
+                <a class="d-block text-decoration-none my-4" href="#">Get in Touch</a>
+                <a class="d-block text-decoration-none my-4" href="#">Help center</a>
+                <a class="d-block text-decoration-none my-4" href="#">How it works</a>
+                <a class="d-block text-decoration-none my-4" href="#">Our Brands</a>
+                <a class="d-block text-decoration-none my-4" href="#">Vehicles Type</a>
+            </div>
+            <div class="col-12 cpl-sm-12 col-md-12 col-lg-3 my-5">
+                <h2>Connect With Us</h2>
+                <a href="#"><i class="fa-brands fa-facebook text-primary me-4 mt-3"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter text-info me-4 mt-3"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram text-danger me-4 mt-3"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin text-white-50 mt-3"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Button [Back  To Top] Starts Here-->
+    <a href="#top" class="backbutton btn btn-secondary p-2 rounded-pill"><i class="fa-solid fa-arrow-up fs-2"></i></a>
+
+    <script src="js/user.js"></script>
+    <script src="js/data.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

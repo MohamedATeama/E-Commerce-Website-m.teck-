@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.TECK</title>
+    <!-- CSS Links -->
+    <!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oleo+Script:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/sign.css">
+</head>
+<body>
+    
+    <!-- Navbar Section Starts Here-->
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body" style="background-color: #084876;">
+        <div class="container">
+            <a class="navbar-brand logo fs-3 text-white" href="index.html">M.TECK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link text-white me-5 fs-5 active">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link text-white me-5 fs-5">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section Starts Here-->
+    <main>
+        <div class="main col-lg-6 col-md-8 col-11">
+            <form>
+                <fieldset class="border border-3 px-5 py-3">
+                    <legend  class="float-none w-auto p-2 fs-1">Login</legend>
+                    <div class="mb-5 mt-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="mb-5">
+                        <label for="pwd" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                    </div>
+                    <div class="form-check mb-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input check" type="checkbox" name="remember"> Remember me
+                        </label>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mb-3">
+                        <a href="./register.html" class="text-decoration-none mb-3">I don't have an account</a>
+                        <button id="loginBtn" type="submit" class="btn btn-secondary w-50 fs-5 rounded-pill">Login</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

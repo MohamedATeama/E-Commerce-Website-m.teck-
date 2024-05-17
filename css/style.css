@@ -1,0 +1,230 @@
+/* ----- SMOOTH SCROLL ----- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+body {
+    background-color: #f5f5f7;
+}
+
+/* ----- Navbar ----- */
+
+.logo {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+}
+
+.count {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    display: none;
+}
+
+.cartProduct {
+    width: 240px;
+    position: absolute;
+    top: 54px;
+    left: -80px;
+    background-color: #e2e2e2;
+    display: none;
+    z-index: 10;
+}
+
+.cartProduct a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: #084876;
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.cartProduct a:hover {
+    opacity: .8;
+}
+
+.cartProduct p {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-bottom: 1px solid gray;
+}
+
+.cartProduct::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 88px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent #e2e2e2 transparent;
+}
+
+@media (max-width: 992px) {
+    .count {
+        left: 30px;
+    }
+
+    .cartProduct {
+        top: 50px;
+        left: -3px;
+    }
+
+    .cartProduct::after {
+        left: 0;
+    }
+}
+
+.searchResult {
+    display: none;
+}
+
+/* ----- Main ----- */
+
+.main {
+    height: 100vh;
+}
+
+.carousel-caption {
+    top: 45%;
+    left: 50%;
+}
+
+.main-title {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #084876;
+}
+
+@media (max-width: 992px) {
+    .main-title {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .main-img {
+        height: 75% !important;
+        margin: auto;
+    }
+
+    .carousel-caption {
+        top: 70%;
+        left: 15%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-img {
+        height: 60% !important;
+        margin: auto;
+    }
+}
+
+/* ----- Products ----- */
+
+.secHead {
+    color: #0a5e9b;
+}
+
+.desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-title {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    color: #084876;
+}
+
+.content {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    white-space: normal;
+    transition: .3s;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2), inset 1px 1px 10px rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+}
+
+.card h3,
+img,
+span {
+    cursor: pointer;
+}
+
+/* ----- Footer ----- */
+
+.footer {
+    background-color: #031b2d;
+}
+
+.footer h2 {
+    color: #bbbbbb;
+}
+
+.footer a {
+    font-size: 25px;
+    color: #8a8a8a;
+}
+
+.footer a:hover {
+    color: #cecece;
+}
+
+.footer i {
+    font-size: 50px;
+}
+
+.backbutton {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* ----------------------------------------------- */
+
+.main-header {
+    color: #0c69ad;
+}

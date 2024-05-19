@@ -171,7 +171,7 @@ function searchResult(arr) {
     result.style.display = "flex";
     let html = "";
     for (const product of arr) {
-        html += `<div class="card rounded-4" style="width: 400px;">
+        html += `<div class="card rounded-4" style="width: 350px;">
         <div class="card-head m-3 d-flex justify-content-between align-items-center">
             <h3 onclick="showDetails(${product.id})" class="card-title">${product.name}</h3>
             <h4>${product.price}</h4>
